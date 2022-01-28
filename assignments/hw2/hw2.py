@@ -13,7 +13,9 @@ import math
 
 
 def sum_of_threes():
-    pass
+    upper = eval(input('What is the upper bound? '))
+
+
 
 
 def multiplication_table():
