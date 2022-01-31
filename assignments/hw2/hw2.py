@@ -15,45 +15,55 @@ import math
 
 
 def sum_of_threes():
-    pass
-# I emailed regarding my issues and questions with this problem.
+    sum1 = 0
+    upper = eval(input("What is the Upper Bound? "))
+    for i in range(0, upper + 1, 3):
+        sum1 = sum1 + i
 
-def multiplication_table(a, b):
-    for x in range(a, (b + 1)):
-        for y in range(a, (b + 1)):
-            print(str(x*y), end="\t")
+    print("The sum of threes is: ", sum1)
+
+def multiplication_table():
+    for i in range(1, 11):
+        for j in range(1, 11):
+            print(str(i*j), end="\t")
         print()
 
 
-multiplication_table(1, 10)
+
 
 def triangle_area():
-    a = eval(input("enter the length of side a: "))
-    b = eval(input("enter the length of side b: "))
-    c = eval(input("enter the length of side c: "))
+    side_a = eval(input("enter the length of side a: "))
+    side_b = eval(input("enter the length of side b: "))
+    side_c = eval(input("enter the length of side c: "))
 
-    s = (a + b + c) / 2
-    area = math.sqrt(s * (s - a) * (s - b) * (s - c))
+    side = (side_a + side_b + side_c) / 2
+    area = math.sqrt(side * (side - side_a) * (side - side_b) * (side - side_c))
     print("The area is: ", area)
 
 
-triangle_area()
+#  triangle_area()
 
 
 def sum_squares():
+    square = 0
+    lower = eval(input("What is the Lower Bound? "))
+    upper = eval(input("What is the Upper Bound? "))
+    for i in range(lower, upper+1):
+        square = square + (i * i)
 
-    # lower = eval(input("Enter the Lower Range: "))
-    # upper = eval(input("Enter the Upper Range: "))
-    # for i in range(lower, upper):
-    #    square = i * i
-    #    sum_square = square + square + square
-   # print(sum_square)
-# I emailed regarding my issues and questions with this problem.
-sum_squares()
+        # sum_squares = (sum_squares * sum_squares) + (sum_squares + 1)
+    print("The sum of squares is: ", square)
+
+# sum_squares()
 
 
 def power():
-    pass
+    base = eval(input("Enter the base: "))
+    exponent = eval(input("Enter the exponent: "))
+    result = 1
+    for _ in range(exponent):
+        result = result * base
+    print(result)
 # I emailed regarding my issues and questions with this problem.
 
 if __name__ == '__main__':
